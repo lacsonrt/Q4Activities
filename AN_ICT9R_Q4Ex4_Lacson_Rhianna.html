@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital@1&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy&display=swap" rel="stylesheet">
+
+	<title>Exercise 4</title>
+
+	<style>
+		h1,h2{
+			font-family: 'Lobster', cursive;
+			background-color: #C58940;
+			text-align: center;
+			color: #FAF8F1;
+		}
+		h3{
+			font-family: 'Poltawski Nowy', serif;
+			text-align: center;
+			color: #C58940;
+		}
+		p{
+			color: #C58940;
+			font-family: 'Poltawski Nowy', serif;
+			
+		}
+		body{
+			background-color: #F1D4A4;
+		}
+		div{
+			text-align: center;
+		}
+		.button{
+			background-color: #E5BA73;
+			border: #C58940;
+			color: #C58940;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Conversion of Qatari Riyal to Philippine Peso</h1>
+
+	<br><br>
+
+	<h3>Enter any amount of Qatari Riyal (QR) to be Estimated to Philippine Peso (₱):</h3>
+
+	<br>
+
+	<div>
+	<form>
+		<input type="text" id="space">
+		<br><br>
+		<input type="Submit" value="ESTIMATE" onclick="Calculate ()" style="background-color: #E5BA73;border: #C58940;color: white;">
+		<input type="Reset" value="CANCEL" id="button" style="background-color: #E5BA73;border: #C58940;color: white;">
+	</form>
+
+	<script type="text/javascript">
+		function Calculate (){
+			let space = document.getElementById('space').value;
+			let convert = space * 15.26;
+			alert("The converted form of the Qatari Riyal to Philippine Peso is : " + convert)
+		}
+	</script>
+	<br><br>
+	<img src="money.png" height="600 px" width="800 px">
+	</div>
+<br><br>
+<p>Reference:<br>
+	Canva.com<p>
+
+
+<br>
+<footer >
+	<small>&copy;RBTL 2022<img src="goat.png" height="30" width="30" class="goat"></small>
+</footer>
+</body>
+</html>
