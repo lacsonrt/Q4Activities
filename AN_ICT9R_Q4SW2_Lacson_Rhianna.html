@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poltawski+Nowy&display=swap" rel="stylesheet">
+
+	<title>Seatwork 2</title>
+
+	<style>
+		h1,h2,h3,h4,h5{
+			font-family: 'Cinzel', serif;
+		}
+		h5{
+			background-color: #D7B157;
+			text-align: center;
+			text: bold;
+		}
+		h2{
+			color: #D7B157;
+			text-shadow: 2px 2px 2px black;
+		}
+		p{
+			font-family: 'Poltawski Nowy', serif;
+			text-align: center;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center;"><b>Conversion of Temperature</b></h1>
+
+	<hr>
+
+			<h5 id='date'></h5>
+		<script type="text/javascript">
+			const DT = new Date();//constant declaration for date object 
+			document.getElementById('date'). innerHTML = DT;
+		</script>
+
+	<hr>
+
+	<h2><b>Fahrenheit and Celsius</b></h2>
+
+	<div class="container">
+		<table class="table table-strap table-secondary table-hover table-border text-center">
+			<tr style="background-color: #D7B157;">
+				<th><h4><b>Fahrenheit(°F)</b></h4></th>
+				<th><h4><b>Celsius(°C)</b></h4></th>
+				<th><h4><b>Description</b></h4></th>
+			</tr>
+
+			<tr>
+				<td><p>-459.67</p></td>
+				<td><p>-273.15</p></td>
+				<td><p>Absolute zero temperature</p></td>
+			</tr>
+
+			<tr>
+				<td><p>32.0</p></td>
+				<td><p>0</p></td>
+				<td><p>Freezing/melting point of water</p></td>
+			</tr>
+
+			<tr>
+				<td><p>69.8</p></td>
+				<td><p>21</p></td>
+				<td><p>Room temperature</p></td>
+			</tr>		
+
+			<tr>
+				<td><p>98.6</p></td>
+				<td><p>37</p></td>
+				<td><p>Average body temperature</p></td>
+			</tr>	
+
+			<tr>
+				<td><p>212.0 </p></td>				
+				<td><p>100</p></td>
+				<td><p>Boiling point of water</p></td>
+			</tr>
+		</table>
+	</div>
+	
+	<hr>
+	<br>
+
+	<div style="text-align:center;" class="container.fluid bg-secondary text-light">
+		<br><br>
+
+		<h2><b>Fahrenheit to Celsius</b></h2>
+		<p><i>Input any amount of Fahrenheit to be converted to Celsius!!</i></p>
+
+		<img src="https://sciencenotes.org/wp-content/uploads/2021/08/Fahrenheit-to-Celsius-Example-1024x683.png" height="600 px" width="800 px">
+
+		<br><br>
+
+		<form>
+			<input type="text" id="FH">
+			<br><br>
+			<input type="Submit" value="CONVERT" onclick="Calculate ()" style="background-color: #D7B157;border: #D7B157;color: white;">
+			<input type="Reset" value="CANCEL" id="button" style="background-color: #D7B157;border: #C58940;color: white;">
+		</form>
+
+		<script type="text/javascript">
+			function Calculate (){
+				let FH = document.getElementById('FH').value;
+				let convert = (FH - 32) * 5/9;
+				alert("The converted form of Fahrenheit to Celsius is : " + convert)
+		}
+		</script>
+		<br><br>
+	</div>
+
+	<hr>
+	<br>
+
+
+
+<br>
+<footer>
+	<small>&copy;RBTL 2022<img src="goat.png" height="30" width="30" class="goat"></small>
+</footer>
+</body>
+</html>
