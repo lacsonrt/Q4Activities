@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poltawski+Nowy&display=swap" rel="stylesheet">
+
+	<title>Q4 Exercise 5</title>
+	<style type="text/css">
+		h1{
+			font-family: 'Cinzel', serif;
+			text-align: center;
+		}
+		h4{
+			font-family: 'Cinzel', serif;
+			background-color: #617A55;
+			color: #FFF8D6;
+
+		}
+		h6,p{
+			font-family: 'Poltawski Nowy', serif;
+		}
+		#Fig1,#Fig3{
+			width: 500px;
+		}
+		#bulb{
+			width: 100px;
+		}
+		div{
+			background-color: #D6E8DB;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1><b>The Law of Electricity | Understand Ohm's Law</b></h1>
+
+
+		<hr>
+
+			<h6 style="text-align: center; background-color: #F7E1AE;" id='date'></h6>
+				<script type="text/javascript">
+					const DT = new Date();//constant declaration for date object 
+					document.getElementById('date'). innerHTML = DT;
+				</script>
+
+		<hr>
+			<h6 style="background-color: #A4D0A4;"><b>Ohm's Law is one of the most fundamental and important laws governing electrical and electronic circuits.</b></h6>
+			
+			<p>Ohm's Law relates relates current, voltage and resistance for a linear device, such that if two are know, the third can be calculated.</p>
+
+			<p>Ohm's Law describes the way current flows through a material when different levels of voltage are applied. Some materials like electrical wires present little resistance to the current flow and this type of material is called a conductor. Hence if this conductor is placed directly across a battery for example, a lot of current would flow.</p>
+			
+			<center><img src="https://www.electronics-notes.com/images/ohms-law-triangle-circuit-headline.jpg" width="500px"></center>
+		<br>
+			<p>In other instances another material may impede the flow of current, but still allow some though. In electrical circuits, these components are often called resistors. Yet other materials let virtually no current though and these materials are called insulators.</p>
+		<hr>
+		<h4><b>The Discovery of Ohm Law</b></h4>
+			<p>There is a mathematical relationship which links current, voltage and resistance. A German scientist named Georg Ohm performed many experiments in an effort to show a link between the three. In the days when he was performing his experiments there were no meters as we know them today.
+			<br><br>
+			Even though, Georg Ohm knew there was a relationship between potential difference, current and the resistive properties of a material it was really difficult to ascertain what this was - even though it seems very obvious today.</p>
+			<br>
+			<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNURJhQjgS_dsqhX79w_EvJJpNr7Wxo4n5bzzXdrmKSZCRBYFk" width="500px"></center>
+			<br>
+			<p>It took considerable effort for Ohm to make his first attempt at discovering the relationship, but this was soon proved wrong - the internal resistance of the batteries he used was probably the cause.
+			<br><br>
+			Then, at his second attempt did he manage to devise what we know today as Ohm's Law.</p>
+		<hr>
+			<h4><b>Analyzing Simple Circuits with Ohm’s Law</b></h4>
+			<p>Let’s see how these equations might work to help us analyze simple circuits:</p>
+
+			<center><img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-ohms-law.jpg" id="Fig1" ></center>
+
+			<p>In the above circuit, there is only one source of voltage (the battery, on the left) and only one source of resistance to current (the lamp, on the right). This makes it very easy to apply Ohm’s Law. If we know the values of any two of the three quantities (voltage, current, and resistance) in this circuit, we can use Ohm’s Law to determine the third.
+		<br><br>
+		<hr>
+			<p>In this first example, we will calculate the amount of current (I) in a circuit, given values of voltage (E) and resistance (R):</p>
+		<br><br>
+				<div class ="row">
+					<div class="col-6 mt-5">
+						<mark><b>Enter Voltage(E):</b></mark> <input type="text" id="V" class="form-control">
+						<mark><b>Enter Resistance (R):</b></mark> <input type="text" id="R"class="form-control">
+						<input type="Submit" value="COMPUTE" class="btn btn-secondary" onclick="Calculate()">
+						<p id="OUTPUT"></p>
+					</div>
+
+					<div class="col-6">
+					<img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-ER.jpg" id="Fig3">
+					</div>
+				</div>
+		<hr>
+		<audio id="audio1" src="electric-hum.mp3"></audio>
+		<h4>What makes a light bulb light up?</h4>
+			<p>When a light bulb connects to an electrical power supply, an electrical current flows from one metal contact to the other. As the current travels through the wires and the filament, the filament heats up to the point where it begins to emit photons, which are small packets of visible light.</p>
+				<button class="btn" style="background-color: #99A98F; color:#F7E1AE; " onmouseover="On()" onmouseout="Off()">TURN ON LIGHT</button>
+				<img src="turnoff.png" id="bulb">
+
+				<script type="text/javascript">
+					function Calculate(){
+							let V = document.getElementById('V').value;
+							let R = document.getElementById('R').value;
+							let Current = V/R;
+							document.getElementById("OUTPUT").innerHTML = "The Currect(I) is : " + Current;
+					}
+
+					function On(){
+						document.getElementById('bulb').src ="turnon.png";
+						document.getElementById('audio1').play();
+					}
+					function Off(){
+						document.getElementById('bulb').src ="turnoff.png";
+						document.getElementById('audio1').pause();
+					}
+				</script>
+
+			<script>
+				window.alert("Welcome, Fellow Scientist!!")
+			</script>	
+
+
+<br><br>
+	SOURCES: <br>
+		<a href="https://www.electronics-notes.com/articles/basic_concepts/resistance/what-is-ohms-law-formula-equation.php">Understand Ohm's Law: Calculations, Formula, Triangle, all you need to know</a><br>
+		<a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/">Ohm’s Law - How Voltage, Current, and Resistance Relate</a><br>
+		<a href="https://blogs.ua.es/fisicateleco/2013/12/10/ohm-y-kirchhoff/">Georg Simon Ohm (1787-1854)</a><br>
+		<a href="https://www.wonderopolis.org/wonder/what-makes-a-light-bulb-light-up">What Makes a Light Bulb Light Up?</a>
+
+
+	</div>
+<br><br>
+<footer>
+	<small>&copy;RBTL 2022<img src="goat.png" height="30" width="30" class="goat"></small>
+</footer>
+</body>
+</html>
